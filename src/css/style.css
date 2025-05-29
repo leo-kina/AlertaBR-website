@@ -43,6 +43,11 @@ nav .navContent{
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
+@media (max-width: 720px) {
+      nav{
+   
+}  
+}
 /* inicio hero */
 .hero{
     background-color: #000D1C;
@@ -58,7 +63,7 @@ nav .navContent{
     
 }
 .hero h2{
-    
+     height: 550px;
     font-family: "Georama", sans-serif;
     font-weight: 800;
     transform: translateX(-1%);
@@ -69,7 +74,11 @@ nav .navContent{
   color: transparent;
 font-size: clamp(10px, 23vw, 450px);
  letter-spacing: 5px;
-margin-bottom: clamp(100px, 20vh, 350px);
+margin-bottom: clamp(100px, 20vh, 400px);
+
+  height: auto; 
+  margin-bottom: 150px;
+
 
  
  text-align: center;
@@ -85,21 +94,75 @@ margin-bottom: clamp(100px, 20vh, 350px);
     
 }
 .assideHero1{
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     margin-left: 30px;
+   
+   
+}
+.assideHero1 p{
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+.assideHero1 button{
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    width: fit-content; 
+
 }
 
 .assideHero2 img{
-    max-width: 100%;
-     width: clamp(400px, 20vw, 500px);
-    height: clamp(550px, 20vw, 650px);
-    
+    width: 400px;
     object-fit: contain; 
     box-shadow: #000;
     margin-right: clamp(0px, 2vw, 30px);
-
     
+}
+
+@media (max-width: 600px) {
+  .assideHero2 img {
+    height: auto;
+    width: 260px;
+    height: auto;
+    margin: 0 auto;
+  }
+.assideHero1{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 5px;
+}
+.assideHero1 p{
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.hero h2{
+    font-family: "Georama", sans-serif;
+    font-weight: 800;
+    transform: translateX(-1%);
+  background: var(--gradient-titleHero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* necessário no Chrome e Safari */
+  background-clip: text;
+  color: transparent;
+font-size: clamp(30px, 8vw, 85px);
+ letter-spacing: 5px;
+margin-bottom: clamp(50px, 15vh, 150px);
+font-size: clamp(10px, 23vw, 450px);
+ text-align: center;
+height: auto; 
+}
 }
