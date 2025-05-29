@@ -1,3 +1,4 @@
+/* pre defenicoes */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
     --gradient-titleHero: linear-gradient(to bottom, #FFF 5%, #000D1C 96%); 
 }
+/* inicio conetudo header   */
 header{
 position: fixed;    
   top: 0;             
@@ -27,11 +29,62 @@ position: fixed;
 }
 nav{
     display: flex;
-    justify-content: space-around;
-    gap: 400px;
+    justify-content: space-between;
+    
 }
 nav .navContent{
     display: flex;
     justify-content: space-around;
-    gap: 50px;
+    gap: 100px;
+}
+/* inicio hero */
+.hero{
+    background-color: var(--color-secundary);
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.hero h2{
+  background: var(--gradient-titleHero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* necessário no Chrome e Safari */
+  background-clip: text;
+  color: transparent;
+font-size: clamp(100px, 23vw, 500px);
+ letter-spacing: 10px;
+ margin-bottom: 300px;
+ text-align: center;
+}
+.heroContent{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+   height: 100%;
+   
+    
+}
+.assideHero1{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.assideHero2 img{
+    max-width: 100%;
+     width: clamp(300px, 20vw, 500px);
+    height: auto; 
+    object-fit: contain; 
+    box-shadow: #000;
+     margin-right: 10px;
+    
 }
