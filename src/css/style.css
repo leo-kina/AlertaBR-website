@@ -4,7 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
 :root {
     --color-primary: #006CD2;
     --color-secundary: #001D3D;
@@ -13,7 +14,7 @@
     --colot-background2: #000D1C;
     --colot-text: #000;
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
-    --gradient-titleHero: linear-gradient(to bottom, #FFF 5%, #000D1C 96%); 
+    --gradient-titleHero: linear-gradient(to bottom, #FFF 4%, #000D1C 96%); 
 }
 /* inicio conetudo header   */
 header{
@@ -21,7 +22,7 @@ position: fixed;
   top: 0;             
   left: 0;
   width: 100%;         
-  background-color: var(--color-secundary); 
+  background-color: #000D1C; 
   z-index: 1000;     
   color: #fff;
   padding: 20px;
@@ -37,28 +38,40 @@ nav .navContent{
     justify-content: space-around;
     gap: 100px;
 }
+.navContent p{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
 /* inicio hero */
 .hero{
-    background-color: var(--color-secundary);
+    background-color: #000D1C;
     position: relative;
-
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+      padding: 0;
     
 }
 .hero h2{
+    
+    font-family: "Georama", sans-serif;
+    font-weight: 800;
+    transform: translateX(-1%);
   background: var(--gradient-titleHero);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* necessário no Chrome e Safari */
   background-clip: text;
   color: transparent;
-font-size: clamp(100px, 23vw, 500px);
- letter-spacing: 10px;
- margin-bottom: 300px;
+font-size: clamp(10px, 23vw, 450px);
+ letter-spacing: 5px;
+margin-bottom: clamp(100px, 20vh, 350px);
+
+ 
  text-align: center;
 }
 .heroContent{
@@ -81,10 +94,12 @@ font-size: clamp(100px, 23vw, 500px);
 
 .assideHero2 img{
     max-width: 100%;
-     width: clamp(300px, 20vw, 500px);
-    height: auto; 
+     width: clamp(400px, 20vw, 500px);
+    height: clamp(550px, 20vw, 650px);
+    
     object-fit: contain; 
     box-shadow: #000;
-     margin-right: 10px;
+    margin-right: clamp(0px, 2vw, 30px);
+
     
 }
