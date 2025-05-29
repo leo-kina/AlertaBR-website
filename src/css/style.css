@@ -14,7 +14,7 @@
     --colot-background2: #000D1C;
     --colot-text: #000;
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
-    --gradient-titleHero: linear-gradient(to bottom, #FFF 4%, #000D1C 96%); 
+    --gradient-titleHero: linear-gradient(to bottom, #FFF 20%, #000D1C 75%); 
 }
 /* inicio conetudo header   */
 header{
@@ -118,6 +118,7 @@ margin-bottom: clamp(100px, 20vh, 400px);
     font-weight: 500;
     font-size: 20px;
     width: fit-content; 
+    cursor: pointer;
 
 }
 
@@ -163,6 +164,18 @@ font-size: clamp(30px, 8vw, 85px);
 margin-bottom: clamp(50px, 15vh, 150px);
 font-size: clamp(10px, 23vw, 450px);
  text-align: center;
-height: auto; 
+    height: auto; 
 }
+.assideHero1 button{
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 }
