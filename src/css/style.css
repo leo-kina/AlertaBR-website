@@ -25,7 +25,7 @@ position: fixed;
   background-color: #000D1C; 
   z-index: 1000;     
   color: #fff;
-  padding: 20px;
+  padding: 30px;
   
 }
 nav{
@@ -44,9 +44,7 @@ nav .navContent{
     font-family: "Poppins", sans-serif;
 }
 @media (max-width: 720px) {
-      nav{
-   
-}  
+
 }
 /* inicio hero */
 .hero{
@@ -72,16 +70,25 @@ nav .navContent{
   -webkit-text-fill-color: transparent; /* necessário no Chrome e Safari */
   background-clip: text;
   color: transparent;
-font-size: clamp(10px, 23vw, 450px);
- letter-spacing: 5px;
-margin-bottom: clamp(100px, 20vh, 400px);
-
+font-size: clamp(0px, 23vw, 480px);
+margin-left: 20px;
   height: auto; 
   margin-bottom: 150px;
 
 
  
  text-align: center;
+}
+@media (max-width: 820px) {
+    .hero h2{
+        font-size: 150px;
+        margin-bottom: 250px;
+}
+.assideHero2 img{
+    margin: auto;
+    margin-left: 40px;
+    
+}
 }
 .heroContent{
     position: absolute;
@@ -126,7 +133,9 @@ margin-bottom: clamp(100px, 20vh, 400px);
     width: 400px;
     object-fit: contain; 
     box-shadow: #000;
-    margin-right: clamp(0px, 2vw, 30px);
+    margin-right: 100px;
+
+
     
 }
 
@@ -179,3 +188,4 @@ font-size: clamp(10px, 23vw, 450px);
 }
 
 }
+/* inicio prevencao*/
