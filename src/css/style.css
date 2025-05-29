@@ -14,3 +14,24 @@
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
     --gradient-titleHero: linear-gradient(to bottom, #FFF 5%, #000D1C 96%); 
 }
+header{
+position: fixed;    
+  top: 0;             
+  left: 0;
+  width: 100%;         
+  background-color: var(--color-secundary); 
+  z-index: 1000;     
+  color: #fff;
+  padding: 20px;
+  
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    gap: 400px;
+}
+nav .navContent{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
