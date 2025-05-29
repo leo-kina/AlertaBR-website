@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #006CD2;
+    --color-secundary: #001D3D;
+    --color-background: #FFF;
+    --colot-background2: #000D1C;
+    --colot-text: #000;
+    --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
+    --gradient-titleHero: linear-gradient(to bottom, #FFF 5%, #000D1C 96%); 
+}
