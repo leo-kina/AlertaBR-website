@@ -83,16 +83,12 @@ nav .navContent{
 
 @media (max-width: 820px) {
     .hero h2{
-        font-size: 150px;
+        font-size: 190px;
         margin-bottom: 250px;
         transition: transform 0.1s ease-out;
         
 }
-.assideHero2 img{
-    margin: auto;
-    margin-left: 40px;
-    
-}
+
 }
 .heroContent{
     position: absolute;
@@ -135,9 +131,12 @@ nav .navContent{
 
 .assideHero2 img{
     width: 400px;
+    
     object-fit: contain; 
     box-shadow: #000;
     margin-right: 100px;
+ 
+    max-width: 100%;
 
 }
 .parallax-container {
@@ -160,10 +159,11 @@ nav .navContent{
 
 @media (max-width: 600px) {
   .assideHero2 img {
-    height: auto;
-    width: 260px;
-    height: auto;
+    height: 400px;
+    width: 600px;
     margin: 0 auto;
+    max-width: 100%;
+    
   }
 .assideHero1{
     margin-bottom: 100px;
@@ -175,7 +175,7 @@ nav .navContent{
 .assideHero1 p{
     color: #FFF;
     font-family: "Poppins", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 .hero h2 {
