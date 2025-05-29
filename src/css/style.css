@@ -28,17 +28,24 @@ position: fixed;
   background-color: #000D1C; 
   z-index: 1000;     
   color: #fff;
-  padding: 30px;
+
   
+}
+.logo img{
+    width: 180px;
+   
+
 }
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
 nav .navContent{
     display: flex;
     justify-content: space-around;
+    
     gap: 100px;
 }
 .navContent p{
