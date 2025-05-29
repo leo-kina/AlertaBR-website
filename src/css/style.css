@@ -211,10 +211,32 @@ nav .navContent{
 }
 /* inicio prevencao*/
 .prevencao{
+  padding: 50px 0px;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-.img1 img{
-    width: 500px;
-    height: 450px;
+.prevencao article{
+  display: flex;
+    justify-content: space-around;
+     white-space: pre-line;
+     gap: 30px;
 }
+.img1 img {
+  max-width: 450px;
+  max-height: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.img2 img {
+  max-width: 450px;
+  max-height: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
