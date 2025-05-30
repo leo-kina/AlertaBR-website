@@ -247,4 +247,25 @@ nav .navContent{
   height: auto;
   border-radius: 20px;
 }
+.h2Prevencao h2{
+  color: #006CD2;
+     font-family: "Georama", sans-serif;
+    font-weight: 800;
+    font-size: clamp(18px, 2.5vw, 28px);
+}
+.h2Prevencao{
+  overflow: hidden;
+}
+p .destaque{
+  background-color: #006dd236;
+  border-radius: 3px;
 
+}
+.textPrevencao p{
+     font-family: "Poppins", sans-serif;
+     font-weight: 500;
+     font-size: clamp(14px, 2.5vw, 17px);
+
+     
+  
+}
