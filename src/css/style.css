@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden
+ 
     
 }
 
@@ -36,6 +36,17 @@ position: fixed;
    
 
 }
+@media (max-width: 750px) {
+  header {
+    height: 60px;
+    background-color: #000D1C;
+  }
+
+  header * {
+    display: none;
+  }
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -54,9 +65,7 @@ nav .navContent{
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
-@media (max-width: 720px) {
 
-}
 /* inicio hero */
 .hero{
     background-color: #000D1C;
@@ -152,7 +161,7 @@ nav .navContent{
   overflow: hidden;
   height: 100%;
   width: 100%;
-  perspective: 1px; /* importante para dar profundidade */
+  perspective: 1px; 
 }
 
 .parallax-container img {
@@ -225,33 +234,38 @@ nav .navContent{
     display: flex;
     flex-direction: column;
     gap: 30px;
+  
 }
 .prevencao article{
   display: flex;
     justify-content: space-around;
      white-space: pre-line;
      gap: 30px;
+   
 }
 .img1 img {
-  max-width: 450px;
-  max-height: 340px;
+  max-width: 600px;
+  max-height: 580px;
   width: 100%;
   height: auto;
   border-radius: 20px;
+    overflow: hidden;
+ 
 }
 
 .img2 img {
-  max-width: 450px;
-  max-height: 340px;
+  max-width: 550px;
+  max-height: 440px;
   width: 100%;
   height: auto;
   border-radius: 20px;
+  overflow: hidden;
 }
 .h2Prevencao h2{
   color: #006CD2;
      font-family: "Georama", sans-serif;
     font-weight: 800;
-    font-size: clamp(18px, 2.5vw, 28px);
+    font-size: clamp(20px, 2.5vw, 30px);
 }
 .h2Prevencao{
   overflow: hidden;
@@ -264,23 +278,49 @@ p .destaque{
 .textPrevencao p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-     font-size: clamp(14px, 2.5vw, 17px);
+     font-size: clamp(20px, 2.5vw, 20px);
 
      
   
 }
 /* inicio instalcao do app*/
-.instalacaoApp{
+.instalacaoApp {
+  position: relative;
   width: 100%;
   height: 70vh;
-      background-image: 
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.8) 100%),
-    url('../assets/img/Objetivos.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+  color: white;
+}
+.instalacaoApp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.8) 100%);
+  z-index: 1;
+}
 
-  
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+   filter: grayscale(35%);
+}
+.instale, .techs {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
 }
 .instale{
   display: flex;
@@ -304,7 +344,7 @@ font-size: clamp(32px, 6vw, 55px);
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 500;
-  font-size: clamp(10px, 2.5vw, 18px);
+  font-size: clamp(10px, 2.5vw, 20px);
 }
 .instale button{
    background-color: var(--color-primary);
@@ -328,17 +368,82 @@ font-size: clamp(32px, 6vw, 55px);
   width: 35px;
 }
 .techs{
-  
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   
 }
+@media (max-width: 750px) {
 .techs img{
-  width: 150px;
+  display: none;
+}
+    
+  }
+.techs img{
+  max-width: 100%;
+  width: clamp(80px, 10vw, 150px);
    filter: grayscale(100%);
 }
 #plus{
-  width:300px;
+  max-width: 100%;
+width: clamp(150px, 20vw, 300px);
 }
+/*inicio objetivos*/
+.objetivo{
+  padding: 50px 0px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+}
+.objetivo article{
+  display: flex;
+    justify-content: space-around;
+     white-space: pre-line;
+     gap: 30px;
+   
+}
+.img1O img {
+  max-width: 600px;
+  max-height: 580px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+    overflow: hidden;
+ 
+}
+
+.img2O img {
+  max-width: 550px;
+  max-height: 440px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.h2Objetivo h2{
+  color: #006CD2;
+     font-family: "Georama", sans-serif;
+    font-weight: 800;
+    font-size: clamp(20px, 2.5vw, 30px);
+}
+.h2Objetivo{
+  overflow: hidden;
+}
+.textObjetivo span{
+  background-color: #006dd236;
+  border-radius: 3px;
+
+}
+.textObjetivo p{
+     font-family: "Poppins", sans-serif;
+     font-weight: 500;
+     font-size: clamp(20px, 2.5vw, 20px);
+
+     
+  
+} 
