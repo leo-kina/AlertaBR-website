@@ -3,28 +3,28 @@ const perguntas = [
     {
         pergunta: "selecione uma palavra?",
         alternativas: [
-            { texto: 'a', correcao: false },
-            { texto: 'b', correcao: false },
-            { texto: 'c', correcao: true },
-            { texto: 'd', correcao: false },
+            { texto: 'a', correcao: 1 },
+            { texto: 'b', correcao: 2 },
+            { texto: 'c', correcao: 3 },
+            { texto: 'd', correcao: 4 },
         ]
     },
     {
         pergunta: "Escolha uma comida boa!",
         alternativas: [
-            { texto: 'a', correcao: false },
-            { texto: 'b', correcao: false },
-            { texto: 'c', correcao: true },
-            { texto: 'd', correcao: false },
+            { texto: 'a', correcao: 1 },
+            { texto: 'b', correcao: 2 },
+            { texto: 'c', correcao:3 },
+            { texto: 'd', correcao: 4 },
         ]
     },
     {
         pergunta: "Escolha o melhor personagem de todos",
         alternativas: [
-            { texto: 'goku', correcao: false },
-            { texto: 'luffy', correcao: false },
-            { texto: 'naruto', correcao: false },
-            { texto: 'sung', correcao: true },
+            { texto: 'goku', correcao:1 },
+            { texto: 'luffy', correcao: 2 },
+            { texto: 'naruto', correcao: 3},
+            { texto: 'sung', correcao: 4},
         ]
     },
 ];
