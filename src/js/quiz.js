@@ -1,98 +1,109 @@
-
-
 const perguntas = [
     {
         pergunta: "selecione uma palavra?",
         alternativas: [
-            {  texto: 'a', correcao: false },
-            {  texto: 'b', correcao: false },
-            {  texto: 'c', correcao: true },
-            {  texto: 'd', correcao: false },
+            { texto: 'a', correcao: false },
+            { texto: 'b', correcao: false },
+            { texto: 'c', correcao: true },
+            { texto: 'd', correcao: false },
         ]
     },
     {
         pergunta: "Escolha uma comida boa!",
         alternativas: [
-            {  texto: 'a', correcao: false },
-            {  texto: 'b', correcao: false },
-            {  texto: 'c', correcao: true },
+            { texto: 'a', correcao: false },
+            { texto: 'b', correcao: false },
+            { texto: 'c', correcao: true },
             { texto: 'd', correcao: false },
         ]
     },
     {
-        pergunta: "Escolha o melhor pesonagem de todos",
+        pergunta: "Escolha o melhor personagem de todos",
         alternativas: [
-            {  texto: 'goku', correcao: false },
-            {  texto: 'luffy', correcao: false },
-            {  texto: 'naruto', correcao: false },
+            { texto: 'goku', correcao: false },
+            { texto: 'luffy', correcao: false },
+            { texto: 'naruto', correcao: false },
             { texto: 'sung', correcao: true },
         ]
     },
-
 ];
 
+const container = document.getElementById('perguntas');
+const btn = document.getElementById('btn');
+const pergunta = document.getElementById('pergunta');
+const startBtn = document.getElementById('startBtn');
 
-const container = document.getElementById('perguntas')
-const btn = document.getElementById('btn')
-const pergunta = document.getElementById('pergunta')
-let respostaSelecionanda = null
-let contador = 0
-let correto = 0
+let respostaSelecionanda = null;
+let contador = 0;
+let correto = 0;
 
-const renderizarPerguntas = (index) =>{
+
+document.querySelector('h2').style.display = 'none';
+pergunta.style.display = 'none';
+
+const renderizarPerguntas = (index) => {
     container.innerHTML = '';
     respostaSelecionanda = null;
-
     pergunta.innerHTML = perguntas[index].pergunta;
 
-perguntas[index].alternativas.map((item)=>{
-    pergunta.innerHTML = perguntas[index].pergunta
-    const newBtn = document.createElement('button')
-    newBtn.innerHTML = item.texto
-    container.appendChild(newBtn)
-    newBtn.addEventListener('click', (()=>{
-        if (item.correcao == true){
-            respostaSelecionanda = 1
-            
-        }
-        else{
-            respostaSelecionanda = 2
-       
-        }
-        return respostaSelecionanda
-    }))
-  
-})
-}
+    perguntas[index].alternativas.map((item) => {
+        const newBtn = document.createElement('button');
+        newBtn.innerHTML = item.texto;
+        container.appendChild(newBtn);
 
-renderizarPerguntas(contador)
+        newBtn.addEventListener('click', () => {
+            respostaSelecionanda = item.correcao ? 1 : 2;
+            // Marca visual
+            [...container.children].forEach(btn => btn.style.backgroundColor = '');
+            newBtn.style.backgroundColor = '#ccc';
+        });
+    });
+};
 
-btn.addEventListener('click', (()=>{
-if (respostaSelecionanda == 1){
 
-    correto++
-}
-else if(respostaSelecionanda == null){
-    alert('Escolha uma respota antes')
-    return
-}
-    contador++
-    
-        if (contador < perguntas.length) {
+startBtn.addEventListener('click', () => {
+    startBtn.style.display = 'none';
+    document.querySelector('h2').style.display = 'block';
+    pergunta.style.display = 'block';
+    btn.style.display = 'inline-block';
+    renderizarPerguntas(contador);
+});
+
+btn.addEventListener('click', () => {
+    if (respostaSelecionanda === null) {
+        alert('Escolha uma resposta antes');
+        return;
+    }
+
+    if (respostaSelecionanda === 1) {
+        correto++;
+    }
+
+    contador++;
+
+    if (contador < perguntas.length) {
         renderizarPerguntas(contador);
     } else {
-        const finalBtn = document.createElement('button')
-        const finalP = document.createElement('p')
-        btn.style.display = "none"
-        finalBtn.innerHTML = 'fim'
-        finalP.innerHTML = 'Fim do Quiz!, voce acertou ' + correto
-        document.body.appendChild(finalP)
-         document.body.appendChild(finalBtn)
-        pergunta.innerHTML = " "
+        btn.style.display = 'none';
+        pergunta.innerHTML = "";
         container.innerHTML = '';
         
-        finalBtn.addEventListener('click', (()=>{
-            
-        }))
+        const finalP = document.createElement('p');
+        finalP.innerHTML = `Fim do Quiz! Você acertou ${correto} de ${perguntas.length}`;
+        document.body.appendChild(finalP);
+
+        const restartBtn = document.createElement('button');
+        restartBtn.innerHTML = 'Recomeçar Quiz';
+        document.body.appendChild(restartBtn);
+
+        restartBtn.addEventListener('click', () => {
+            contador = 0;
+            correto = 0;
+            respostaSelecionanda = null;
+            finalP.remove();
+            restartBtn.remove();
+            renderizarPerguntas(contador);
+            btn.style.display = 'inline-block';
+        });
     }
-}))
+});
