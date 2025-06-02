@@ -1,3 +1,4 @@
+//criando nossa lista de objetos para ser as perguntas e respotas
 const perguntas = [
     {
         pergunta: "selecione uma palavra?",
@@ -27,7 +28,7 @@ const perguntas = [
         ]
     },
 ];
-
+//DOM
 const container = document.getElementById('perguntas');
 const btn = document.getElementById('btn');
 const pergunta = document.getElementById('pergunta');
@@ -36,25 +37,25 @@ const startBtn = document.getElementById('startBtn');
 let respostaSelecionanda = null;
 let contador = 0;
 let correto = 0;
-
+//salavdo valores para utilizar no placar e na mudanca do indice
 
 document.querySelector('h2').style.display = 'none';
 pergunta.style.display = 'none';
-
+//nao mostrar as perguntas
+//funcao para renderizar as perguntas
 const renderizarPerguntas = (index) => {
     container.innerHTML = '';
     respostaSelecionanda = null;
     pergunta.innerHTML = perguntas[index].pergunta;
-
+// usando um metodo de array, para percorrer item por item
     perguntas[index].alternativas.map((item) => {
         const newBtn = document.createElement('button');
         newBtn.innerHTML = item.texto;
         container.appendChild(newBtn);
-
+//evento para selecioanr a resposta
         newBtn.addEventListener('click', () => {
-            respostaSelecionanda = item.correcao ? 1 : 2;
-            // Marca visual
-            [...container.children].forEach(btn => btn.style.backgroundColor = '');
+            respostaSelecionanda = item.correcao ? 1 : 2; //um tipo de condicao 
+            [...container.children].forEach(btn => btn.style.backgroundColor = ''); //metodo spread (...) ele serve para adicionar um novo item na array
             newBtn.style.backgroundColor = '#ccc';
         });
     });
@@ -66,10 +67,11 @@ startBtn.addEventListener('click', () => {
     document.querySelector('h2').style.display = 'block';
     pergunta.style.display = 'block';
     btn.style.display = 'inline-block';
-    renderizarPerguntas(contador);
+    renderizarPerguntas(contador); //chamando a funcao
 });
 
 btn.addEventListener('click', () => {
+    //outro tipo de condicao
     if (respostaSelecionanda === null) {
         alert('Escolha uma resposta antes');
         return;
@@ -80,7 +82,7 @@ btn.addEventListener('click', () => {
     }
 
     contador++;
-
+//essa condicao serve para, caso tenha mais perguntas eh para o quiz continuar caso n tenha ele finaliza
     if (contador < perguntas.length) {
         renderizarPerguntas(contador);
     } else {
@@ -95,7 +97,7 @@ btn.addEventListener('click', () => {
         const restartBtn = document.createElement('button');
         restartBtn.innerHTML = 'Recomeçar Quiz';
         document.body.appendChild(restartBtn);
-
+//botao para recomecar
         restartBtn.addEventListener('click', () => {
             contador = 0;
             correto = 0;
