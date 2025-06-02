@@ -265,7 +265,7 @@ nav .navContent{
   color: #006CD2;
      font-family: "Georama", sans-serif;
     font-weight: 800;
-    font-size: clamp(20px, 2.5vw, 30px);
+    font-size: clamp(20px, 2.5vw, 40px);
 }
 .h2Prevencao{
   overflow: hidden;
@@ -278,7 +278,7 @@ p .destaque{
 .textPrevencao p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-     font-size: clamp(20px, 2.5vw, 20px);
+     font-size: clamp(20px, 2.5vw, 25px);
 
      
   
@@ -384,7 +384,7 @@ font-size: clamp(32px, 6vw, 55px);
 .techs img{
   max-width: 100%;
   width: clamp(80px, 10vw, 150px);
-   filter: grayscale(100%);
+
 }
 #plus{
   max-width: 100%;
@@ -429,7 +429,7 @@ width: clamp(150px, 20vw, 300px);
   color: #006CD2;
      font-family: "Georama", sans-serif;
     font-weight: 800;
-    font-size: clamp(20px, 2.5vw, 30px);
+    font-size: clamp(20px, 2.5vw, 40px);
 }
 .h2Objetivo{
   overflow: hidden;
@@ -442,7 +442,7 @@ width: clamp(150px, 20vw, 300px);
 .textObjetivo p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-     font-size: clamp(20px, 2.5vw, 20px);
+     font-size: clamp(20px, 2.5vw, 25px);
 
      
   
