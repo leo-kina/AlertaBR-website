@@ -64,15 +64,20 @@ nav .navContent{
     gap: 70px;
     margin-right: 50px;
 }
-.navContent p{
+a{
+text-decoration: none;
+color: #fff;
+}
+.navContent {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
+    
 }
-.navContent p:hover{
-color: #6bb8ff;
-  transition: .5s;
+.navContent p:hover,
+.navContent a:hover {
+  color: #6bb8ff;
+  transition: 0.5s;
 }
-
 /* inicio hero */
 .hero{
     background-color: #000D1C;
