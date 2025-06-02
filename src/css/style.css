@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
-    
 }
-
+html, body {
+  overflow-x: hidden;
+}
 
 :root {
     --color-primary: #006CD2;
@@ -27,6 +27,7 @@ position: fixed;
   background-color: #000D1C; 
   z-index: 1000;     
   color: #fff;
+
 
 
 
@@ -55,6 +56,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     
+     
+    
 }
 nav .navContent{
 
@@ -63,6 +66,7 @@ nav .navContent{
     justify-content: flex-end;
     gap: 70px;
     margin-right: 50px;
+    
 }
 .navContent a{
 text-decoration: none;
@@ -590,4 +594,33 @@ footer .divisaoDireitosLogo{
 }
 .direitosAutorais p{
   font-family: "Poppins", sans-serif;
+}
+@media (max-width: 768px) {
+  footer .collums {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  footer .col1,
+  footer .col2,
+  footer .col3 {
+    width: 100%;
+    align-items: center;
+  }
+
+  footer .divisaoDireitosLogo {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .linha-vertical {
+    width: 80%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px auto; 
+    display: block;
+  }
 }
