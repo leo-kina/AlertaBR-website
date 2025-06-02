@@ -64,7 +64,7 @@ nav .navContent{
     gap: 70px;
     margin-right: 50px;
 }
-a{
+.navContent a{
 text-decoration: none;
 color: #fff;
 }
@@ -501,6 +501,11 @@ footer .collums{
 
   
 }
+.collums h2{
+   font-family: "Georama", sans-serif;
+   font-weight: 500;
+   font-size: 22px;
+}
 /*col1*/
 footer .col1{
   display: flex;
@@ -514,7 +519,9 @@ footer .col1 p{
   justify-content: center;
   align-items: center;
   gap: 3px;
+ font-family: "Poppins", sans-serif;
 }
+
 footer .col1 span img{
   width: 25px;
 
@@ -533,10 +540,15 @@ footer .col2 p{
   justify-content: center;
   align-items: center;
   gap: 3px;
+  font-family: "Poppins", sans-serif;
 }
 footer .col2 span img{
   width: 25px;
 
+}
+footer a{
+  font-family: "Poppins", sans-serif;
+  color: #F8AC30;
 }
 /*col3*/
 footer .col3{
@@ -551,6 +563,7 @@ footer .col3 p{
   justify-content: center;
   align-items: center;
   gap: 3px;
+  font-family: "Poppins", sans-serif;
 }
 footer .col3 span img{
   width: 25px;
@@ -568,4 +581,10 @@ footer .divisaoDireitosLogo{
   width: 150px;
   max-height: 80px;
   object-fit: contain;
+}
+.linha-vertical {
+  width: 2px; /* espessura da linha */
+  height: 100px; /* altura da linha */
+  background-color: #ccc; /* cor da linha */
+  margin: 0 20px; /* espaço horizontal ao redor da linha */
 }
