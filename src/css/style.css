@@ -68,6 +68,10 @@ nav .navContent{
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
+.navContent p:hover{
+color: #6bb8ff;
+  transition: .5s;
+}
 
 /* inicio hero */
 .hero{
@@ -150,6 +154,11 @@ nav .navContent{
     width: fit-content; 
     cursor: pointer;
 
+}
+.assideHero1 button:hover{
+
+  background-color: #006dd291;
+    transition: .4s;
 }
 
 .assideHero2 img{
@@ -370,6 +379,11 @@ font-size: clamp(32px, 6vw, 55px);
   font-weight: 600;
   padding-right: 15px;
 
+}
+.instale button:hover{
+
+  background-color: #0c4f8d;
+    transition: .4s;
 }
 .instale button img{
  
