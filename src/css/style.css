@@ -243,6 +243,7 @@ nav .navContent{
     justify-content: space-around;
      white-space: pre-line;
      gap: 30px;
+
    
 }
 .img1 img {
@@ -267,7 +268,7 @@ nav .navContent{
   color: #006CD2;
      font-family: "Georama", sans-serif;
     font-weight: 800;
-    font-size: clamp(20px, 2.5vw, 40px);
+    font-size: clamp(20px, 2.5vw, 35px);
 }
 .h2Prevencao{
   overflow: hidden;
@@ -280,7 +281,7 @@ p .destaque{
 .textPrevencao p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-     font-size: clamp(20px, 2.5vw, 25px);
+      font-size: clamp(13px, 2.5vw, 20px);
 
      
   
@@ -296,6 +297,7 @@ p .destaque{
   justify-content: flex-end; 
   align-items: center;
   color: white;
+
 }
 .instalacaoApp::before {
   content: '';
@@ -400,6 +402,8 @@ width: clamp(150px, 20vw, 300px);
     display: flex;
     flex-direction: column;
     gap: 30px;
+       position: relative;
+    
   
 }
 .objetivo article{
@@ -407,6 +411,7 @@ width: clamp(150px, 20vw, 300px);
     justify-content: space-around;
      white-space: pre-line;
      gap: 30px;
+        position: relative;
    
 }
 .img1O img {
@@ -416,6 +421,7 @@ width: clamp(150px, 20vw, 300px);
   height: auto;
   border-radius: 20px;
     overflow: hidden;
+    
  
 }
 
@@ -444,7 +450,8 @@ width: clamp(150px, 20vw, 300px);
 .textObjetivo p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-     font-size: clamp(20px, 2.5vw, 25px);
+   font-size: clamp(13px, 2.5vw, 22px);
+  
 
      
   
@@ -452,6 +459,7 @@ width: clamp(150px, 20vw, 300px);
 
 /* inicio footer*/
 footer {
+    position: relative;
   padding: 30px 0 20px;
   width: 100%;
   background-color: var(--color-secundary);
