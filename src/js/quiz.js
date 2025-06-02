@@ -1,4 +1,3 @@
-//criando nossa lista de objetos para ser as perguntas e respotas
 const perguntas = [
     {
         pergunta: "selecione uma palavra?",
@@ -14,98 +13,119 @@ const perguntas = [
         alternativas: [
             { texto: 'a', correcao: 1 },
             { texto: 'b', correcao: 2 },
-            { texto: 'c', correcao:3 },
+            { texto: 'c', correcao: 3 },
             { texto: 'd', correcao: 4 },
         ]
     },
     {
         pergunta: "Escolha o melhor personagem de todos",
         alternativas: [
-            { texto: 'goku', correcao:1 },
+            { texto: 'goku', correcao: 1 },
             { texto: 'luffy', correcao: 2 },
-            { texto: 'naruto', correcao: 3},
-            { texto: 'sung', correcao: 4},
+            { texto: 'naruto', correcao: 3 },
+            { texto: 'sung', correcao: 4 },
         ]
     },
 ];
-//DOM
+
+const afirmacoes = [
+    { text: 'Você tem coisa1' },
+    { text: 'Você tem coisa2' },
+    { text: 'Você tem coisa3' },
+    { text: 'Você tem coisa4' },
+];
+
 const container = document.getElementById('perguntas');
 const btn = document.getElementById('btn');
 const pergunta = document.getElementById('pergunta');
 const startBtn = document.getElementById('startBtn');
 
-let respostaSelecionanda = null;
 let contador = 0;
-let correto = 0;
-//salavdo valores para utilizar no placar e na mudanca do indice
+let somaResposta = 0;
+let respostaSelecionada = null;
 
+// Inicialmente esconde perguntas e botão enviar, só mostra o botão start
 document.querySelector('h2').style.display = 'none';
 pergunta.style.display = 'none';
-//nao mostrar as perguntas
-//funcao para renderizar as perguntas
-const renderizarPerguntas = (index) => {
+btn.style.display = 'none';
+
+function renderizarPerguntas(index) {
     container.innerHTML = '';
-    respostaSelecionanda = null;
-    pergunta.innerHTML = perguntas[index].pergunta;
-// usando um metodo de array, para percorrer item por item
-    perguntas[index].alternativas.map((item) => {
+    respostaSelecionada = null;
+    pergunta.textContent = perguntas[index].pergunta;
+
+    perguntas[index].alternativas.forEach(item => {
         const newBtn = document.createElement('button');
-        newBtn.innerHTML = item.texto;
+        newBtn.textContent = item.texto;
         container.appendChild(newBtn);
-//evento para selecioanr a resposta
+
         newBtn.addEventListener('click', () => {
-            respostaSelecionanda = item.correcao ? 1 : 2; //um tipo de condicao 
-            [...container.children].forEach(btn => btn.style.backgroundColor = ''); //metodo spread (...) ele serve para adicionar um novo item na array
+            respostaSelecionada = item.correcao;
+
+            // Remove a marcação de todos os botões
+            [...container.children].forEach(btn => btn.style.backgroundColor = '');
+
+            // Marca o botão clicado
             newBtn.style.backgroundColor = '#ccc';
         });
     });
-};
-
+}
 
 startBtn.addEventListener('click', () => {
     startBtn.style.display = 'none';
     document.querySelector('h2').style.display = 'block';
     pergunta.style.display = 'block';
     btn.style.display = 'inline-block';
-    renderizarPerguntas(contador); //chamando a funcao
+    renderizarPerguntas(contador);
 });
 
 btn.addEventListener('click', () => {
-    //outro tipo de condicao
-    if (respostaSelecionanda === null) {
+    if (respostaSelecionada === null) {
         alert('Escolha uma resposta antes');
         return;
     }
 
-    if (respostaSelecionanda === 1) {
-        correto++;
-    }
-
+    somaResposta += respostaSelecionada;
     contador++;
-//essa condicao serve para, caso tenha mais perguntas eh para o quiz continuar caso n tenha ele finaliza
+
     if (contador < perguntas.length) {
         renderizarPerguntas(contador);
     } else {
+        // Final do quiz
         btn.style.display = 'none';
-        pergunta.innerHTML = "";
+        pergunta.textContent = '';
         container.innerHTML = '';
-        
+
+        // Define qual mensagem vai aparecer conforme somaResposta
+        let indiceAfirmacao;
+        if (somaResposta <= 3) {
+            indiceAfirmacao = 0;
+        } else if (somaResposta <= 6) {
+            indiceAfirmacao = 1;
+        } else if (somaResposta <= 9) {
+            indiceAfirmacao = 2;
+        } else {
+            indiceAfirmacao = 3;
+        }
+
         const finalP = document.createElement('p');
-        finalP.innerHTML = `Fim do Quiz! Você acertou ${correto} de ${perguntas.length}`;
+        finalP.textContent = `Fim do Quiz! ${afirmacoes[indiceAfirmacao].text}`;
         document.body.appendChild(finalP);
 
         const restartBtn = document.createElement('button');
-        restartBtn.innerHTML = 'Recomeçar Quiz';
+        restartBtn.textContent = 'Recomeçar Quiz';
         document.body.appendChild(restartBtn);
-//botao para recomecar
+
         restartBtn.addEventListener('click', () => {
             contador = 0;
-            correto = 0;
-            respostaSelecionanda = null;
+            somaResposta = 0;
+            respostaSelecionada = null;
+
             finalP.remove();
             restartBtn.remove();
-            renderizarPerguntas(contador);
+
             btn.style.display = 'inline-block';
+            renderizarPerguntas(contador);
         });
     }
 });
