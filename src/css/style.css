@@ -583,8 +583,11 @@ footer .divisaoDireitosLogo{
   object-fit: contain;
 }
 .linha-vertical {
-  width: 2px; /* espessura da linha */
-  height: 100px; /* altura da linha */
-  background-color: #ccc; /* cor da linha */
-  margin: 0 20px; /* espaço horizontal ao redor da linha */
+  width: 2px; 
+  height: 100px; 
+  background-color: #ccc; 
+  margin: 0 20px;
+}
+.direitosAutorais p{
+  font-family: "Poppins", sans-serif;
 }
