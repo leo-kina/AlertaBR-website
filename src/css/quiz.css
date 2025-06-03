@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
+
 }
 
 :root {
@@ -36,7 +37,6 @@ position: fixed;
 }
 @media (max-width: 770px) {
   header {
-    height: 50px;
     background-color: #000D1C;
   }
 
@@ -79,11 +79,19 @@ color: #fff;
 }
 
 /* iniico corpo quiz*/ 
+.inicio {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--color-background);
-    padding-top: 120px;
+    padding-top: 100px;
     text-align: center;
     color: var(--colot-text);
 }
@@ -106,14 +114,21 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-#startBtn:hover, #btn:hover, #perguntas button:hover {
-    background-color: #0051a3;
+
+#startBtn:hover,
+#btn:hover {
+    background-color: #0051a3; 
+}
+
+
+#perguntas button:hover {
+    background-color: #797979;
 }
 
 #pergunta {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: var(--color-secundary);
+    color: #fff;
 }
 
 #perguntas {
@@ -123,33 +138,55 @@ h2 {
     max-width: 400px;
     margin: 0 auto 30px;
 }
-
 #perguntas button {
-    background-color: #f0f0f0;
+    background-color: #cccccc;  /* fundo vermelho */
     color: #000;
-    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
 }
 
 #perguntas button.selected {
-    background-color: #ccc;
+    background-color: var(--color-primary); /* vermelho mais escuro */
+    color: white;
 }
-
 button:disabled {
     background-color: #aaa;
     cursor: not-allowed;
 }
 
-@media (max-width: 600px) {
-    h2 {
-        font-size: 1.5rem;
-    }
 
-    #perguntas {
-        padding: 0 20px;
-    }
+.video-bg {
+  position: relative;
+  height: calc(100vh - 100px); /* desconta o tamanho do header */
+  width: 100%;
+  overflow: hidden;
+}
 
-    #startBtn, #btn, #perguntas button {
-        width: 100%;
-        font-size: 1rem;
-    }
+.video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-bg .conteudo {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
 }
