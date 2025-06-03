@@ -79,6 +79,14 @@ color: #fff;
 }
 
 /* iniico corpo quiz*/ 
+.inicio h1{
+    font-weight: 500;
+}
+.inicio p{
+    font-weight: 300;
+    font-size: 20px;
+}
+
 .inicio {
     height: 100vh;
     width: 100%;
@@ -86,6 +94,8 @@ color: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #FFF;
+    gap: 20px;
 }
 
 body {
@@ -103,6 +113,7 @@ h2 {
 }
 
 #startBtn, #btn, #perguntas button {
+     font-family: "Poppins", sans-serif;
     background-color: var(--color-primary);
     color: white;
     border: none;
