@@ -101,7 +101,8 @@ const afirmacoes = [
   const btn = document.getElementById('btn');
   const pergunta = document.getElementById('pergunta');
   const startBtn = document.getElementById('startBtn');
-
+  const contadorPergunta = document.getElementById('contadorPergunta'); 
+    contadorPergunta.style.color = 'yellow';
   let contador = 0;
   let somaResposta = 0;
   let respostaSelecionada = null;
@@ -110,12 +111,12 @@ const h2 = document.querySelector('h2');
 if (h2) h2.style.display = 'none';
   pergunta.style.display = 'none';
   btn.style.display = 'none';
-
+  contadorPergunta.style.display = 'none'; 
   function renderizarPerguntas(index) {
       container.innerHTML = '';
       respostaSelecionada = null;
       pergunta.textContent = perguntas[index].pergunta;
-
+  contadorPergunta.textContent = `Pergunta ${index + 1} de ${perguntas.length}`;
       perguntas[index].alternativas.forEach(item => {
           const newBtn = document.createElement('button');
           newBtn.textContent = item.texto;
@@ -134,6 +135,7 @@ if (h2) h2.style.display = 'none';
       document.querySelector('.inicio').style.display = 'none';
       pergunta.style.display = 'block';
       btn.style.display = 'inline-block';
+    contadorPergunta.style.display = 'block';
       renderizarPerguntas(contador);
   });
 
@@ -152,7 +154,7 @@ if (h2) h2.style.display = 'none';
           btn.style.display = 'none';
           pergunta.textContent = '';
           container.innerHTML = '';
-
+              contadorPergunta.style.display = 'none';
           let indiceAfirmacao;
           if (somaResposta <= 15) {
               indiceAfirmacao = 0;
@@ -180,6 +182,7 @@ if (h2) h2.style.display = 'none';
               restartBtn.remove();
 
               btn.style.display = 'inline-block';
+                contadorPergunta.style.display = 'block'; 
               renderizarPerguntas(contador);
           });
       }
