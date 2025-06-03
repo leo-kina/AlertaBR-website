@@ -18,6 +18,7 @@ html, body {
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
     --gradient-titleHero: linear-gradient(to bottom, #FFF 20%, #000D1C 75%); 
 }
+/* inicio header*/
 header{
 position: fixed;    
   top: 0;             
@@ -75,4 +76,80 @@ color: #fff;
 .navContent a:hover {
   color: #6bb8ff;
   transition: 0.5s;
+}
+
+/* iniico corpo quiz*/ 
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-background);
+    padding-top: 120px;
+    text-align: center;
+    color: var(--colot-text);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+#startBtn, #btn, #perguntas button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn:hover, #btn:hover, #perguntas button:hover {
+    background-color: #0051a3;
+}
+
+#pergunta {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--color-secundary);
+}
+
+#perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+#perguntas button {
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+#perguntas button.selected {
+    background-color: #ccc;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #perguntas {
+        padding: 0 20px;
+    }
+
+    #startBtn, #btn, #perguntas button {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
