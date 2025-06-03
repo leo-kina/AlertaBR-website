@@ -19,69 +19,116 @@ html, body {
     --gradient-titleHero: linear-gradient(to bottom, #FFF 20%, #000D1C 75%); 
 }
 /* inicio conetudo header   */
-header{
-position: fixed;    
-  top: 0;             
+
+
+header {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;         
-  background-color: #000D1C; 
-  z-index: 1000;     
+  width: 100%;
+  background-color: #000D1C;
+  z-index: 1000;
   color: #fff;
-
-
-
-
-
-  
-}
-.logo img{
-    width: 180px;
-   
-
-}
-@media (max-width: 770px) {
-  header {
-    height: 50px;
-    background-color: #000D1C;
-  }
-
-  header * {
-    display: none;
-  }
 }
 
-nav{
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-     
-    
+.logo img {
+  width: 180px;
 }
-nav .navContent{
 
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 70px;
-    margin-right: 50px;
-    
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
-.navContent a{
-text-decoration: none;
-color: #fff;
-}
+
+/* Menu desktop */
+
 .navContent {
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    
+  display: flex;
+  gap: 70px;
+  margin-right: 50px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  justify-content: flex-end;
 }
-.navContent p:hover,
+
+.navContent a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
 .navContent a:hover {
   color: #6bb8ff;
-  transition: 0.5s;
 }
+
+/* Botão hambúrguer - escondido no desktop */
+
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 20px;
+  z-index: 1100;
+}
+
+.barra {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Responsivo */
+
+@media (max-width: 820px) {
+
+  .hamburguer {
+    display: flex;
+  }
+
+
+  .navContent {
+    position: fixed;
+    top: 100px; 
+    left: 0;
+    width: 100%;
+    background-color: #000D1C;
+    flex-direction: column;
+    padding: 0 40px;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 999;
+    align-items: center; 
+    box-sizing: border-box;
+  }
+
+
+  .navContent.active {
+    max-height: 300px;
+    padding: 20px 40px; 
+  }
+
+  .navContent a {
+    font-size: 18px;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; 
+  }
+}
+
 /* inicio hero */
 .hero{
     background-color: #000D1C;
