@@ -262,3 +262,25 @@ button:disabled {
   text-align: center;
   background-color: #162636;
 }
+
+/* Riscos */
+.risco-baixo {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.risco-moderado {
+  color: #ffee00;
+  font-weight: bold;
+}
+
+.risco-alto {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+.risco-altissimo {
+  color: #ff3333;
+  font-weight: bold;
+}
+
