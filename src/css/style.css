@@ -437,6 +437,9 @@ font-size: clamp(32px, 6vw, 55px);
   padding-right: 15px;
 
 }
+.instale a{
+  text-decoration: none;
+}
 .instale button:hover{
 
   background-color: #0c4f8d;
