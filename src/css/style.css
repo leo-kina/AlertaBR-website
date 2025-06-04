@@ -4,10 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-  overflow-x: hidden;
-}
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
     --color-primary: #006CD2;
     --color-secundary: #001D3D;
@@ -366,6 +366,7 @@ p .destaque{
   justify-content: flex-end; 
   align-items: center;
   color: white;
+  scroll-margin-top: 110px;
 
 }
 .bgVideo {
