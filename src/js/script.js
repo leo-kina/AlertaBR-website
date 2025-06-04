@@ -27,3 +27,20 @@ hamburguerBtn.addEventListener("click", () => {
     }
   });
 });
+
+  const videos = document.querySelectorAll('.bgVideo');
+  let current = 0;
+
+  function showSlide(index) {
+    videos.forEach((video, i) => {
+      video.classList.toggle('active', i === index);
+    });
+  }
+
+  showSlide(current); // mostrar o primeiro
+
+  setInterval(() => {
+    current = (current + 1) % videos.length;
+    showSlide(current);
+  }, 5000); // troca a cada 5 segundos
+
