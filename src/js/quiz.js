@@ -106,6 +106,7 @@ const afirmacoes = [
   const startBtn = document.getElementById('startBtn');
   const contadorPergunta = document.getElementById('contadorPergunta');
 
+
   contadorPergunta.style.color = 'yellow';
 
   let contador = 0;
@@ -139,11 +140,22 @@ const afirmacoes = [
   }
 
   startBtn.addEventListener('click', () => {
+  const input1 = document.getElementById('input1').value.trim();
+  const input2 = document.getElementById('input2').value.trim();
+  const input3 = document.getElementById('input3').value.trim();
+    if (input1 === '' || input2 === ''){
+      alert('Por favor, preencha todos os campos')
+    }
+    else if(input2 != input3){
+       alert('confirmacao de email errada')
+    }
+    else{
     document.querySelector('.inicio').style.display = 'none';
     pergunta.style.display = 'block';
     btn.style.display = 'inline-block';
     contadorPergunta.style.display = 'block';
     renderizarPerguntas(contador);
+    }
   });
 
   btn.addEventListener('click', () => {
