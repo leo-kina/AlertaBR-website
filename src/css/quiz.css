@@ -42,8 +42,6 @@ nav {
   padding: 0 20px;
 }
 
-/* Menu desktop */
-
 .navContent {
   display: flex;
   gap: 70px;
@@ -63,6 +61,37 @@ nav {
 .navContent a:hover {
   color: #6bb8ff;
 }
+
+/* input */
+.inicio input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: black;
+}
+
+.inicio input[type="text"]:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 108, 210, 0.3);
+  outline: none;
+}
+
+.inicio input[type="text"]::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+.inicio input + input {
+  margin-top: 12px;
+}
+
 
 /* Botão hambúrguer - escondido no desktop */
 

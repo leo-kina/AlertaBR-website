@@ -147,7 +147,7 @@ const afirmacoes = [
       alert('Por favor, preencha todos os campos')
     }
     else if(input2 != input3){
-       alert('confirmacao de email errada')
+      alert('A confirmação do e-mail não corresponde ao e-mail informado.');
     }
     else{
     document.querySelector('.inicio').style.display = 'none';
