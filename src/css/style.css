@@ -34,7 +34,12 @@ header {
 .logo img {
   width: 180px;
 }
-
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
 nav {
   height: 100px;
   display: flex;
