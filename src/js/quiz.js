@@ -97,7 +97,7 @@ const afirmacoes = [
   { text: 'Você provavelmente mora em uma área de <span class="risco-baixo">baixo risco</span>. Continue atento e mantenha os cuidados.' },
   { text: 'Sua região apresenta <span class="risco-moderado">risco moderado</span>. Fique atento às condições climáticas e sinais de perigo.' },
   { text: 'Sua área pode ter <span class="risco-alto">alto risco</span>. Considere medidas preventivas e fique preparado para emergências.' },
-  { text: 'Você está em uma <span class="risco-altissimo">zona de risco muito alta</span>. É importante buscar orientação e tomar todas as precauções.' },
+  { text: 'Você está em uma zona de <span class="risco-altissimo">risco muito alta</span>. É importante buscar orientação e tomar todas as precauções.' },
 ];
 
   const container = document.getElementById('perguntas');
