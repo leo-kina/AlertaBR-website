@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     title.style.transform = `translateX(${-offset}px)`;
     img.style.transform = `translateY(${scrollY * 0.2}px)`;
   });
-//modo claro e escuro
+
 //modo claro, escuro e daltônico
 const darkBtn = document.getElementById('darkModeBtn');
 const lightBtn = document.getElementById('lightModeBtn');
