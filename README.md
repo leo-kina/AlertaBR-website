@@ -1,4 +1,4 @@
-# ⛩️ AlertaBR - Website GS
+# 💧 AlertaBR - Website GS
 
 Bem-vindo ao repositório do website do **AlertBR** – uma plataforma dedicada ao monitoramento e previsão de **chuvas intensas e enchentes** em tempo real.
 
