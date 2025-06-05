@@ -91,7 +91,7 @@ body.daltonico-mode main h2 {
 
 body.daltonico-mode main span {
   background-color: var(--color-primary-daltonico);
-  color: var(--color-text-daltonico);
+  color: #fff;
 }
 
 body.daltonico-mode .hero button,
