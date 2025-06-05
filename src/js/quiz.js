@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     {
-      pergunta: "Qual a frequência com que você recebe informações sobre prevenção a desastres na sua comunidade?",
-      alternativas: [
-        { texto: "Nunca recebo", correcao: 4 },
-        { texto: "Raramente", correcao: 3 },
-        { texto: "Ocasionalmente", correcao: 2 },
-        { texto: "Frequentemente", correcao: 1 },
-      ],
+       pergunta: "Você costuma receber notícias ou dicas sobre como evitar desastres naturais na sua comunidade?",
+  alternativas: [
+    { texto: "Nunca recebo", correcao: 1 },
+    { texto: "Raramente recebo", correcao: 2 },
+    { texto: "Às vezes recebo", correcao: 3 },
+    { texto: "Sempre recebo", correcao: 4 },
+  ],
     },
   ];
 
