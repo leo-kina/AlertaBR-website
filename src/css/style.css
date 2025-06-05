@@ -22,7 +22,14 @@ html {
 --color-secundary-dark: #2C1A5B;    
 --color-background-dark: #1A1132;    
 --color-background2-dark: #0F0A1D;   
---color-text-dark: #D8CFFF;         
+--color-text-dark: #D8CFFF;    
+    /*palheta daltonismo */
+  --color-primary-daltonico:    #004E8C;  
+  --color-secondary-daltonico:  #003766; 
+  --color-accent-daltonico:     #FFB347;  
+  --color-background-daltonico: #E6F0FF;  
+  --color-background2-daltonico:#002D5F;
+  --color-text-daltonico:       #001F3F;
 }
 
 /* Tema claro (padrão) */
@@ -59,6 +66,44 @@ body.dark-mode main button:hover{
 body.dark-mode .hero button:hover{
   background-color: #41089e;
 }
+/* Tema daltonico */
+.hidden {
+  display: none;
+  
+}
+.logo p {
+ font-family: "Poppins", sans-serif;
+font-size: clamp(11px, 1.5vw, 19px);
+
+}
+body.daltonico-mode {
+  background-color: var(--color-background-daltonico);
+  color: var(--color-text-daltonico);
+}
+
+body.daltonico-mode footer {
+  background-color: var(--color-background2-daltonico);
+}
+
+body.daltonico-mode main h2 {
+  color: var(--color-primary-daltonico);
+}
+
+body.daltonico-mode main span {
+  background-color: var(--color-primary-daltonico);
+  color: var(--color-text-daltonico);
+}
+
+body.daltonico-mode .hero button,
+body.daltonico-mode main button {
+  background-color: var(--color-accent-daltonico);
+}
+
+body.daltonico-mode .hero button:hover,
+body.daltonico-mode main button:hover {
+  background-color: #cc8b24; /* sombra mais escura do amarelo para hover */
+}
+
 /* inicio conetudo header   */
 header {
   position: fixed;

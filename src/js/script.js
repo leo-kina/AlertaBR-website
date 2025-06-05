@@ -10,16 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
     img.style.transform = `translateY(${scrollY * 0.2}px)`;
   });
 //modo claro e escuro
-  const darkBtn = document.getElementById('darkModeBtn');
-  const lightBtn = document.getElementById('lightModeBtn');
+//modo claro, escuro e daltônico
+const darkBtn = document.getElementById('darkModeBtn');
+const lightBtn = document.getElementById('lightModeBtn');
+const daltonicoBtn = document.getElementById('daltonicoModeBtn');
+const daltonicoText = document.querySelector('.hidden');
 
-  darkBtn.addEventListener('click', () => {
-    document.body.classList.add('dark-mode');
-  });
+function clearThemes() {
+  document.body.classList.remove('dark-mode', 'light-mode', 'daltonico-mode');
+  daltonicoText.classList.add('hidden');  // Esconde o texto sempre que limpar tema
+}
 
-  lightBtn.addEventListener('click', () => {
-    document.body.classList.remove('dark-mode');
-  });
+darkBtn.addEventListener('click', () => {
+  clearThemes();
+  document.body.classList.add('dark-mode');
+});
+
+lightBtn.addEventListener('click', () => {
+  clearThemes();
+  document.body.classList.add('light-mode');
+});
+
+daltonicoBtn.addEventListener('click', () => {
+  clearThemes();
+  document.body.classList.add('daltonico-mode');
+  daltonicoText.classList.remove('hidden');  // Mostra o texto só no daltonico
+});
+
   // Menu hamburguer
  const hamburguerBtn = document.getElementById("hamburguerBtn");
 const navContent = document.querySelector(".navContent");
