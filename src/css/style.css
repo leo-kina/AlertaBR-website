@@ -50,6 +50,12 @@ body.dark-mode main span{
 body.dark-mode .hero  button{
   background-color: #863aff;
 }
+body.dark-mode main  button{
+  background-color: #863aff;
+}
+body.dark-mode main button:hover{
+  background-color: #41089e;
+}
 body.dark-mode .hero button:hover{
   background-color: #41089e;
 }
