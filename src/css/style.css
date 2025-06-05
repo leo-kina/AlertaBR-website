@@ -47,10 +47,10 @@ body.dark-mode main span{
   color: #000000;
   
 }
-body.dark-mode main button{
+body.dark-mode .hero  button{
   background-color: #863aff;
 }
-body.dark-mode main button:hover{
+body.dark-mode .hero button:hover{
   background-color: #41089e;
 }
 /* inicio conetudo header   */
@@ -373,8 +373,8 @@ nav {
    
 }
 .img1 img {
-  max-width: 600px;
-  max-height: 580px;
+  max-width: 500px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -383,8 +383,8 @@ nav {
 }
 
 .img2 img {
-  max-width: 550px;
-  max-height: 440px;
+  max-width: 500px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -407,7 +407,7 @@ p .destaque{
 .textPrevencao p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-      font-size: clamp(13px, 2.5vw, 20px);
+      font-size: clamp(11px, 1.5vw, 19px);
 
      
   
@@ -551,8 +551,8 @@ width: clamp(150px, 20vw, 300px);
    
 }
 .img1O img {
-  max-width: 600px;
-  max-height: 580px;
+  max-width: 500px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -562,8 +562,8 @@ width: clamp(150px, 20vw, 300px);
 }
 
 .img2O img {
-  max-width: 550px;
-  max-height: 440px;
+  max-width: 500px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -586,7 +586,7 @@ width: clamp(150px, 20vw, 300px);
 .textObjetivo p{
      font-family: "Poppins", sans-serif;
      font-weight: 500;
-   font-size: clamp(13px, 2.5vw, 22px);
+   font-size: clamp(11px, 1.5vw, 19px);
   
 
      
