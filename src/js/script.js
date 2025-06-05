@@ -9,7 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     title.style.transform = `translateX(${-offset}px)`;
     img.style.transform = `translateY(${scrollY * 0.2}px)`;
   });
+//modo claro e escuro
+  const darkBtn = document.getElementById('darkModeBtn');
+  const lightBtn = document.getElementById('lightModeBtn');
 
+  darkBtn.addEventListener('click', () => {
+    document.body.classList.add('dark-mode');
+  });
+
+  lightBtn.addEventListener('click', () => {
+    document.body.classList.remove('dark-mode');
+  });
   // Menu hamburguer
  const hamburguerBtn = document.getElementById("hamburguerBtn");
 const navContent = document.querySelector(".navContent");

@@ -17,10 +17,43 @@ html {
     --colot-text: #000;
     --gradient-default: linear-gradient(to right, #000 30%, #000, 70%);
     --gradient-titleHero: linear-gradient(to bottom, #FFF 20%, #000D1C 75%); 
+    /*palheta dark mode*/
+--color-primary-dark: #7B5FFF;     
+--color-secundary-dark: #2C1A5B;    
+--color-background-dark: #1A1132;    
+--color-background2-dark: #0F0A1D;   
+--color-text-dark: #D8CFFF;         
+}
+
+/* Tema claro (padrão) */
+body {
+
+}
+
+/* Tema escuro */
+body.dark-mode {
+  background-color: var(--color-background2-dark);
+   color: var(--color-text-dark);
+}
+body.dark-mode footer{
+    background-color:var(--color-background-dark);
+}
+body.dark-mode main h2{
+ color: var(--color-primary-dark);
+}
+
+body.dark-mode main span{
+  background-color:var(--color-primary-dark) ;
+  color: #000000;
+  
+}
+body.dark-mode button{
+  background-color: #863aff;
+}
+body.dark-mode button:hover{
+  background-color: #41089e;
 }
 /* inicio conetudo header   */
-
-
 header {
   position: fixed;
   top: 0;
@@ -39,6 +72,12 @@ header {
   flex-direction: row;
   align-items: center;
   gap: 10px;
+}
+.logo button i{
+ background: transparent;
+ border: none;
+ color: #fff;
+ outline: none;
 }
 nav {
   height: 100px;
