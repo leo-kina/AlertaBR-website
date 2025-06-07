@@ -788,9 +788,8 @@ footer .divisaoDireitosLogo{
     display: block;
   }
 }
-<<<<<<< HEAD
 
-=======
+
 /* Media Query para mobile */
 @media (max-width: 768px) {
   section {
@@ -806,4 +805,4 @@ footer .divisaoDireitosLogo{
     font-size: 0.95rem;
   }
 }
->>>>>>> kina
+
