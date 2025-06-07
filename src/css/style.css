@@ -791,7 +791,7 @@ footer .divisaoDireitosLogo{
 
 
 /* Media Query para mobile */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   section {
     padding: 40px 10px;
     text-align: center;
