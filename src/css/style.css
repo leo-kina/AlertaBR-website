@@ -714,6 +714,10 @@ footer a{
   font-family: "Poppins", sans-serif;
   color: #F8AC30;
 }
+footer .col3 a{
+  text-decoration: none;
+  color: #fff;
+}
 /*col3*/
 footer .col3{
   display: flex;
