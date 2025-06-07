@@ -4,14 +4,12 @@ Bem-vindo ao repositório do website do **AlertBR** – uma plataforma dedicada 
 
 Nosso **objetivo** é fornecer *alertas precisos e acessíveis* para que comunidades possam se preparar e agir diante de eventos **climáticos extremos**.
 
-
-<div align="center" >
+<div align="center">
     <img src="./src/assets/img/website/webSite.png" alt="Home Website" style="height: 300px;">
 </div>
 
 ## 🔗 Acesse o site
-<!-- Adicionar Link do github pages -->
-👉 [https:/www.alertBR.com.br](https://github.com/AlertaBR/AlertaBR-website)
+👉 [www.alertabr.org.br](https://alertabr.github.io/AlertaBR-website/)
 
 ## 💻 Funcionalidades
 
@@ -28,12 +26,23 @@ Nosso **objetivo** é fornecer *alertas precisos e acessíveis* para que comunid
   - Vídeo de apresentação;
   - Informações de direitos autorais.
 
-## 🛠️ Tecnologias Utilizadas
+---
+
+## 🎬 Vídeo de Apresentação
+
+👉 [Assista ao vídeo de apresentação no YouTube](https://www.youtube.com/watch?v=olNNX5NEaHg)
+
+
+
+---
+
+## 🛠️ Tecnologias Utilizadas  
 👉 [Link de Design do Protótipo](https://www.figma.com/design/PhPHWQIssrKu9sEVCi4i5X/AlertaBR---Figma?node-id=0-1&p=f&t=W6rD40cJStd6ovVI-0)
 
-- **Frontend:** HTML5 - CSS3 - Java Script
+- **Frontend:** HTML5 - CSS3 - Java Script  
 - **Prototipagem:** Figma
 
+---
 
 ## ❓ Alguma dúvida?
 Envie mensagem seguindo o link 👉 [Clique aqui!](mailto:contato@alertabr.com)
