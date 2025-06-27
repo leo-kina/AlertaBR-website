@@ -5,7 +5,7 @@ Nosso objetivo é fornecer alertas precisos e acessíveis para que comunidades p
 
 <div align="center"> <img src="./src/assets/img/website/webSite.png" alt="Home Website" height="300" /> </div>
 🔗 Acesse o site
-👉 www.alertabr.org.br
+👉 [www.alertabr.org.br](https://alertabr.github.io/AlertaBR-website/)
 
 💻 Funcionalidades
 Página inicial com hero interativo, destacando o propósito do aplicativo e seu impacto social;
